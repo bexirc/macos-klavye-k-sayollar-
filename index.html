@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Kısayollar">
+<meta name="theme-color" content="#F2F2F7">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>Kısayollar</title>
+<style>
+:root{--scale:1;--gl:.7;--sgl:.7;--bg:#000;--txt:#fff;--card:#1c1c1e;--card-txt:#fff;--sub:#8e8e93;--field:#2c2c2e;--kb:#3a3a3c;--kbtxt:#fff;--sep:rgba(84,84,88,.65);--seg-on:#636366;--accent:#0a84ff;--tsh:0 1px 3px rgba(0,0,0,.55)}
+html[data-theme="light"]{--bg:#F2F2F7;--txt:#000;--card:#fff;--card-txt:#000;--sub:#8e8e93;--field:#E9E9EF;--kb:#fff;--kbtxt:#1d1d1f;--sep:rgba(60,60,67,.29);--seg-on:#fff;--accent:#007aff}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;overflow:hidden}
+html{font-size:calc(16px*var(--scale))}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",sans-serif;color:var(--txt);background:var(--bg);-webkit-font-smoothing:antialiased;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none}
+#wall{position:fixed;inset:0;background:var(--bg)}
+#app{position:fixed;inset:0;overflow:hidden}
+
+/* Ana ekran */
+#home{position:absolute;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 1rem calc(env(safe-area-inset-bottom,0px) + 6rem);z-index:1;transition:transform .5s cubic-bezier(.32,.72,0,1);will-change:transform}
+#home.under{transform:translateX(-22%) scale(.97)}
+#home::after,.screen::after{content:'';position:absolute;inset:0;background:#000;opacity:0;pointer-events:none;transition:opacity .5s ease}
+#home.under::after{opacity:.35}
+.nav{position:sticky;top:0;z-index:4;height:calc(env(safe-area-inset-top,0px) + 3.4rem);padding:env(safe-area-inset-top,0px) 1rem 0;margin:0 -1rem;display:flex;align-items:center;justify-content:space-between;background:var(--bg);border-bottom:.5px solid var(--sep)}
+.nav .ntitle{position:absolute;left:0;right:0;top:calc(50% + env(safe-area-inset-top,0px)/2);transform:translateY(-50%);text-align:center;margin:0;font-size:1.0625rem;font-weight:600;pointer-events:none}
+.pill{position:relative;z-index:1;height:2.6rem;padding:0 1.1rem;border-radius:999px;border:.5px solid var(--sep);background:var(--card);color:var(--txt);font-size:1.0625rem;font-weight:600;font-family:inherit;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.circ{position:relative;z-index:1;width:2.6rem;height:2.6rem;border-radius:50%;border:.5px solid var(--sep);background:var(--card);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.28rem;padding:0;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.circ i{display:block;width:1.2rem;height:2.4px;border-radius:2px;background:var(--txt)}
+.glass{position:relative;margin-top:1.6rem;border-radius:2.2rem;padding:1.1rem .5rem 1.3rem;overflow:hidden;
+  background:linear-gradient(145deg,rgba(255,255,255,calc(var(--gl)*.30)),rgba(255,255,255,calc(var(--gl)*.06)));
+  -webkit-backdrop-filter:blur(calc(var(--gl)*26px)) saturate(calc(1 + var(--gl)*.8));
+  backdrop-filter:blur(calc(var(--gl)*26px)) saturate(calc(1 + var(--gl)*.8));
+  border:1px solid rgba(255,255,255,calc(var(--gl)*.35));
+  box-shadow:inset 0 1px 1px rgba(255,255,255,calc(var(--gl)*.6)),0 calc(var(--gl)*12px) calc(var(--gl)*32px) rgba(0,0,0,calc(var(--gl)*.25))}
+.glass::before{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(180deg,rgba(255,255,255,calc(var(--gl)*.2)) 0%,transparent 42%);pointer-events:none}
+.grid{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));row-gap:1.5rem;column-gap:.2rem}
+.tile{position:relative;display:flex;flex-direction:column;align-items:center;gap:.45rem;min-width:0;width:100%;cursor:pointer;touch-action:pan-y;transition:transform .2s}
+.editing .tile{touch-action:none}
+.ic{width:min(4.3rem,100%);aspect-ratio:1;height:auto;border-radius:22.37%;position:relative;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,var(--g1),var(--g2));box-shadow:0 .5rem 1rem rgba(0,0,0,.38),inset 0 0 0 .5px rgba(255,255,255,.3);overflow:hidden}
+.ic::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,0) 55%)}
+.ic::after{content:'';position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 -.12rem .3rem rgba(0,0,0,.18)}
+.ic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ic svg{width:58%;height:58%;position:relative;filter:drop-shadow(0 1px 2px rgba(0,0,0,.28))}
+.lbl{font-size:.75rem;color:var(--txt);text-shadow:var(--tsh);max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
+.tile.drag{z-index:9;opacity:.92}
+.tile.target .ic{box-shadow:0 0 0 .18rem rgba(255,255,255,.8)}
+.editing .tile .ic{animation:wig .3s ease-in-out infinite alternate}
+@keyframes wig{from{transform:rotate(-1.5deg)}to{transform:rotate(1.5deg)}}
+.del{display:none;position:absolute;top:-.3rem;left:-.3rem;width:1.35rem;height:1.35rem;border-radius:50%;background:#8e8e93;color:#fff;text-align:center;line-height:1.3rem;font-size:1.1rem;font-weight:700;z-index:3}
+.editing .del{display:block}
+
+/* Açılır menü */
+.popmenu{position:fixed;right:1rem;top:calc(env(safe-area-inset-top,0px) + 3.8rem);min-width:13rem;background:var(--card);border-radius:1rem;box-shadow:0 .6rem 2rem rgba(0,0,0,.25);overflow:hidden;z-index:30;display:none;transform-origin:top right}
+.popmenu.open{display:block;animation:popin .25s cubic-bezier(.32,.72,0,1)}
+@keyframes popin{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+.popmenu button{display:block;width:100%;text-align:left;background:none;border:none;border-top:.5px solid var(--sep);padding:.85rem 1rem;color:var(--txt);font-size:1.0625rem;font-family:inherit}
+.popmenu button:first-child{border-top:none}
+
+/* Arama */
+.sbar{position:fixed;left:1rem;right:1rem;bottom:calc(env(safe-area-inset-bottom,0px) + .8rem);z-index:20}
+.sbar input{background:rgba(255,255,255,calc(var(--sgl)*.22));-webkit-backdrop-filter:blur(calc(var(--sgl)*22px)) saturate(calc(1 + var(--sgl)*.8));backdrop-filter:blur(calc(var(--sgl)*22px)) saturate(calc(1 + var(--sgl)*.8));border:1px solid rgba(255,255,255,calc(var(--sgl)*.3));box-shadow:0 .4rem 1.4rem rgba(0,0,0,calc(var(--sgl)*.25));color:var(--txt);border-radius:999px;padding:.85rem 1.3rem;width:100%;font-size:1rem;outline:none;font-family:inherit}
+.sbar input::placeholder{color:var(--sub)}
+.sbar input.plain{background:var(--card);-webkit-backdrop-filter:none;backdrop-filter:none;border:none;box-shadow:0 .4rem 1.2rem rgba(0,0,0,.15)}
+.res{position:fixed;left:1rem;right:1rem;bottom:calc(env(safe-area-inset-bottom,0px) + 4.6rem);max-height:52dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;background:var(--card);border-radius:1rem;box-shadow:0 .5rem 2rem rgba(0,0,0,.3);z-index:20;display:none}
+.res .empty{padding:.9rem;color:var(--sub);font-size:.9rem;text-align:center}
+
+/* Ekranlar (itme geçişi) */
+.screen{position:absolute;inset:0;background:var(--bg);color:var(--txt);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .5s cubic-bezier(.32,.72,0,1);will-change:transform;box-shadow:-.3rem 0 1rem rgba(0,0,0,.2);contain:layout paint;z-index:5}
+.screen.in{transform:translateX(0)}
+.screen.under{transform:translateX(-22%)}
+.screen.under::after{opacity:.35}
+.snav{flex:none;position:relative;display:flex;align-items:center;justify-content:space-between;height:calc(env(safe-area-inset-top,0px) + 3.4rem);padding:env(safe-area-inset-top,0px) 1rem 0;background:var(--bg);border-bottom:.5px solid var(--sep)}
+.snav .ttl{position:absolute;left:0;right:0;top:calc(50% + env(safe-area-inset-top,0px)/2);transform:translateY(-50%);text-align:center;font-size:1.0625rem;font-weight:600;pointer-events:none}
+.back{position:relative;z-index:1;background:none;border:none;color:var(--accent);font-size:1.0625rem;font-family:inherit;padding:.4rem 0;display:flex;align-items:center;gap:.2rem}
+.body{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 1rem calc(env(safe-area-inset-bottom,0px) + 2rem)}
+.sec{font-size:.8125rem;color:var(--sub);text-transform:uppercase;letter-spacing:.02em;margin:1.2rem .9rem .45rem}
+.group{background:var(--card);border-radius:.9rem;overflow:hidden;margin-bottom:.4rem}
+.row{display:flex;align-items:center;justify-content:space-between;gap:.6rem;padding:.75rem .9rem;border-top:.5px solid var(--sep)}
+.row:first-child{border-top:none}
+.d{font-size:1.0625rem;color:var(--card-txt);flex:1;min-width:0}
+.d small{display:block;color:var(--sub);font-size:.8125rem;margin-top:.15rem}
+.kbs{display:flex;gap:.25rem;flex-wrap:wrap;justify-content:flex-end}
+.kb{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.75rem;background:var(--kb);color:var(--kbtxt);border-radius:.4rem;padding:.2rem .42rem;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.35)}
+.tip{background:var(--card);border-radius:.9rem;padding:.8rem .9rem;font-size:.9rem;line-height:1.45;color:var(--card-txt);margin-top:.6rem}
+.tip b{color:#ff9f0a}
+input[type=text],input:not([type]),input[type=search]{width:100%;background:var(--field);border:none;border-radius:.6rem;padding:.7rem .8rem;color:var(--txt);font-size:1rem;outline:none;font-family:inherit}
+input::placeholder{color:var(--sub)}
+input[type=range]{accent-color:var(--accent);background:none;padding:.3rem 0;width:100%}
+.pad{padding:.7rem;display:flex;flex-direction:column;gap:.5rem}
+.lab{display:flex;justify-content:space-between;color:var(--card-txt);font-size:1rem}
+.lab b{font-weight:600;color:var(--sub)}
+.btn{display:block;width:100%;background:var(--accent);border:none;color:#fff;border-radius:.7rem;padding:.75rem 1rem;font-size:1.0625rem;font-weight:600;text-align:center;font-family:inherit}
+.btn.ghost{background:var(--field);color:var(--txt)}
+.btn.danger{background:#ff453a}
+.link-del{background:none;border:none;color:#ff453a;font-size:.9375rem;padding:.3rem;font-family:inherit}
+.link-set{background:none;border:none;color:var(--accent);font-size:.9375rem;padding:.3rem;font-family:inherit}
+.seg{display:flex;background:var(--field);border-radius:.6rem;padding:.2rem}
+.seg button{flex:1;background:none;border:none;color:var(--txt);padding:.5rem 0;border-radius:.45rem;font-size:.95rem;font-family:inherit}
+.seg button.on{background:var(--seg-on);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem}
+.sw{aspect-ratio:9/16;border-radius:.6rem;border:2px solid transparent}
+.sw.on{border-color:var(--accent)}
+.pal{display:grid;grid-template-columns:repeat(6,1fr);gap:.5rem}
+.pal div{aspect-ratio:1;border-radius:50%;border:2px solid transparent}
+.pal div.on{border-color:var(--txt)}
+.pav{width:6.5rem;height:6.5rem;border-radius:50%;overflow:hidden;margin:1rem auto .4rem;background:linear-gradient(160deg,#9AA3E8,#5B63C9);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2.4rem;font-weight:600}
+.pav img{width:100%;height:100%;object-fit:cover}
+.dev{text-align:center;gap:.2rem;padding:1rem}
+.dev b{font-size:1.0625rem}
+.dev span{color:var(--sub);font-size:.85rem}
+.note{font-size:.8125rem;color:var(--sub);text-align:center;margin:.6rem .8rem}
+</style>
+</head>
+<body>
+<div id="wall"></div>
+<div id="app">
+  <section id="home">
+    <header class="nav">
+      <button class="pill" id="edit">Düzenle</button>
+      <h1 class="ntitle">Kısayollar</h1>
+      <button class="circ" id="menu" aria-label="Menü"><i></i><i></i><i></i></button>
+    </header>
+    <div class="glass"><div class="grid" id="grid"></div></div>
+  </section>
+</div>
+<div class="popmenu" id="pop">
+  <button data-m="profile">Profil</button>
+  <button data-m="settings">Ayarlar</button>
+</div>
+<div class="res" id="res"></div>
+<div class="sbar"><input id="q" type="search" placeholder="Kısayol ara veya sor (örn. kopyala)" autocomplete="off" enterkeyhint="search"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+const KEY = 'kisayol-app-v3';
+const DEFAULT_ORDER = ['sistem','shot','finder','metin','safari','bilgi','ekstra','ayarlar'];
+const SCALES = {s:.9, m:1, l:1.15, xl:1.3};
+const WALLS_DARK = ['#000000','#1C1C1E','#2C2C2E','#3A3A3C','#48484A'];
+const WALLS_LIGHT = ['#F2F2F7','#E5E5EA','#D1D1D6','#C7C7CC','#AEAEB2'];
+const PALETTE = [['#FF7AA2','#E0306A'],['#5ED890','#1A9A58'],['#6CC8FF','#2268E0'],['#C9A2FF','#7B3FE4'],['#FFD27A','#F08A1C'],['#9AAABE','#4F6378']];
+const TEETH = [...Array(8)].map((_,i) => `<rect x="10.4" y="1.4" width="3.2" height="4.4" rx="1" transform="rotate(${i*45} 12 12)"/>`).join('');
+const STAR = '<path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1.1 5.8L12 16.8l-5.3 2.8 1.1-5.8L3.5 9.7l5.9-.8z" fill="#fff"/>';
+
+const META = {
+  sistem:{name:'Sistem', g:['#7C7EFF','#4A3BE0'], svg:
+    '<rect x="2.5" y="3.5" width="19" height="13.5" rx="2.6" fill="#fff"/><rect x="4.6" y="5.6" width="14.8" height="9.3" rx="1.2" fill="rgba(20,20,60,.35)"/><path d="M4.6 12.4l4-3.4 3 2.4 2.6-2.1 5.2 4.1v1.8H4.6z" fill="#fff" opacity=".85"/><rect x="9" y="18" width="6" height="1.8" rx=".9" fill="#fff"/><rect x="6.5" y="20" width="11" height="1.5" rx=".75" fill="#fff" opacity=".75"/>'},
+  shot:{name:'Ekran', g:['#43E08F','#11924F'], svg:
+    '<circle cx="12" cy="12" r="8.6" fill="none" stroke="#fff" stroke-width="2"/><path d="M12 2.2v4M12 17.8v4M2.2 12h4M17.8 12h4" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="4.2" fill="#fff"/><circle cx="13.4" cy="10.6" r="1.1" fill="rgba(0,60,30,.35)"/>'},
+  finder:{name:'Finder', g:['#5BC4FF','#1A6BE6'], svg:
+    '<path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h4.1l2 2.3h6.9A2.5 2.5 0 0 1 21 8.8V18a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 3 18z" fill="#fff"/><rect x="3" y="10" width="18" height="2.2" fill="rgba(0,40,120,.14)"/><rect x="6.5" y="13.6" width="6.5" height="1.7" rx=".85" fill="rgba(0,40,120,.3)"/><rect x="6.5" y="16.4" width="10.5" height="1.7" rx=".85" fill="rgba(0,40,120,.22)"/>'},
+  metin:{name:'Metin', g:['#D8A0FF','#7A3FE8'], svg:
+    '<path d="M6.5 2.8h7.6l4.4 4.4V19.5a2 2 0 0 1-2 2H6.5a2 2 0 0 1-2-2V4.8a2 2 0 0 1 2-2z" fill="#fff"/><path d="M14.1 2.8v4.4h4.4z" fill="rgba(60,0,120,.2)"/><rect x="7" y="10" width="8" height="1.7" rx=".85" fill="rgba(60,0,120,.35)"/><rect x="7" y="13.5" width="10" height="1.7" rx=".85" fill="rgba(60,0,120,.28)"/><rect x="7" y="17" width="6" height="1.7" rx=".85" fill="rgba(60,0,120,.22)"/>'},
+  safari:{name:'Safari', g:['#4DD8E8','#0B8FB8'], svg:
+    '<circle cx="12" cy="12" r="9.2" fill="#fff"/><circle cx="12" cy="12" r="7.4" fill="none" stroke="rgba(0,80,100,.22)" stroke-width="1"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z" fill="#ff4d3d"/><path d="M8.4 15.6l2.1-5.1 5.1-2.1-2.1 5.1z" fill="rgba(0,60,80,.4)"/>'},
+  bilgi:{name:'Biliyor muydun', g:['#FFC861','#FF6B3D'], svg:
+    '<path d="M12 3.4a6.3 6.3 0 0 0-3.7 11.4c.6.5.9 1.1.9 1.8v.4h5.6v-.4c0-.7.3-1.3.9-1.8A6.3 6.3 0 0 0 12 3.4z" fill="#fff"/><rect x="9.2" y="17.8" width="5.6" height="1.8" rx=".9" fill="#fff"/><rect x="10.2" y="20.4" width="3.6" height="1.5" rx=".75" fill="#fff" opacity=".8"/><path d="M12 .9v1.2M4.4 4.2l.8.8M19.6 4.2l-.8.8" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/>'},
+  ekstra:{name:'Ekstra', g:['#A9B4C6','#5D6A80'], svg:
+    '<rect x="3" y="3" width="18" height="18" rx="5.2" fill="rgba(255,255,255,.22)"/><path d="M12 7v10M7 12h10" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>'},
+  ayarlar:{name:'Ayarlar', g:['#C9CED8','#6E7787'], svg:
+    '<g fill="#fff">'+TEETH+'<circle cx="12" cy="12" r="7.2"/></g><circle cx="12" cy="12" r="3" fill="rgba(40,46,60,.55)"/>'}
+};
+
+const SECTIONS = {
+  sistem:{name:'Sistem', items:[
+    ['⌘ Space','Spotlight'],['⌘ Tab','Uygulamalar arası geçiş'],['⌘ `','Aynı uygulamanın pencereleri'],
+    ['⌘ W','Pencereyi kapat'],['⌘ Q','Uygulamadan çık'],['⌘ M','Pencereyi küçült'],['⌘ H','Uygulamayı gizle'],
+    ['⌥ ⌘ H','Diğerlerini gizle'],['⌃ ↑','Mission Control'],['⌃ ↓','Uygulamanın pencereleri'],
+    ['⌃ ← →','Masaüstü değiştir'],['⌃ ⌘ F','Tam ekran'],['⌃ ⌘ Space','Emoji ve simgeler'],
+    ['⌃ ⌘ Q','Ekranı kilitle'],['⌥ ⌘ D','Dock gizle / göster'],['⇧ ⌘ Q','Oturumu kapat'],
+    ['⌥ ⌘ Esc','Uygulamayı zorla kapat'],['F11','Masaüstünü göster']
+  ], tip:'Mission Control’de ⌃ ↑ ile açılan ekranda oklarla gezinip Return ile pencereye geç.'},
+  shot:{name:'Ekran Görüntüsü', items:[
+    ['⇧ ⌘ 3','Tüm ekran'],['⇧ ⌘ 4','Seçilen alan'],['⇧ ⌘ 4 Space','Tek pencere'],['⇧ ⌘ 5','Araç çubuğu ve kayıt']
+  ], tip:'Control basılıyken ekran görüntüsü alırsan masaüstüne değil panoya kopyalanır.'},
+  finder:{name:'Finder', items:[
+    ['⌘ N','Yeni Finder penceresi'],['⇧ ⌘ G','Klasöre git'],['⇧ ⌘ H','Ana klasör'],['⇧ ⌘ D','Masaüstü'],
+    ['⇧ ⌘ A','Uygulamalar'],['⇧ ⌘ N','Yeni klasör'],['⌘ ↑ ↓','Üst klasör / seçileni aç'],
+    ['Return','Yeniden adlandır'],['Space','Hızlı önizleme'],['⌘ I','Bilgi al'],['⌘ Delete','Çöpe taşı'],
+    ['⇧ ⌘ Delete','Çöpü boşalt']
+  ], tip:'Çöpe atmadan kalıcı silmek için ⌥ ⌘ Delete kullanabilirsin.'},
+  metin:{name:'Metin Düzenleme', items:[
+    ['⌘ A','Tümünü seç'],['⌘ C X V','Kopyala / Kes / Yapıştır'],['⌘ Z','Geri al'],['⇧ ⌘ Z','Yinele'],
+    ['⌘ S P','Kaydet / Yazdır'],['⌘ B I U','Kalın / İtalik / Altı çizili'],['⌥ ← →','Kelime kelime'],
+    ['⌘ ← →','Satır başı / sonu'],['⌘ ↑ ↓','Belge başı / sonu'],['⌥ Delete','Kelime sil'],
+    ['⇧ + ok','Seçimi genişlet'],['⌥ ⌘ F','Bul ve değiştir'],['⌘ G','Sonrakini bul']
+  ], tip:'fn tuşuna iki kez basarak emoji panelini açabilirsin.'},
+  safari:{name:'Safari', items:[
+    ['⌘ L','Adres çubuğu'],['⌘ F','Sayfada ara'],['⌘ T','Yeni sekme'],['⌘ W','Sekmeyi kapat'],['⇧ ⌘ T','Kapatılanı aç'],
+    ['⌘ 1 – 9','Sekme seç'],['⌃ Tab','Sonraki sekme'],['⌘ [ ]','Geri / ileri'],['⌘ R','Yenile'],
+    ['⌘ D','Yer imi ekle'],['⌘ Y','Geçmiş'],['⌥ ⌘ L','İndirmeler'],['⌘ + -','Yakınlaştır / uzaklaştır']
+  ]},
+  bilgi:{name:'Biliyor muydun?', items:[
+    ['⌃ ⌘ Space','Emoji paneli hemen hemen her yazı alanında açılır'],
+    ['⌥ ⌘ Esc','Donan uygulamayı zorla kapatır'],
+    ['⌘','Simgenin kökeni tartışmalı; yaygın anlatıya göre ortak alan işareti'],
+    ['Ekran görüntüsü','Varsayılan olarak masaüstüne kaydedilir']
+  ]}
+};
+const ALIAS = {
+  kopyala:'⌘ C', yapıştır:'⌘ V', kes:'⌘ X', geri:'⌘ Z', yinele:'⇧ ⌘ Z', kapat:'⌘ W',
+  ekran:'⇧ ⌘ 3', görüntü:'⇧ ⌘ 4', kayıt:'⇧ ⌘ 5', kilit:'⌃ ⌘ Q', çık:'⌘ Q',
+  sekme:'⌘ T', yenile:'⌘ R', ara:'⌘ F', spotlight:'⌘ Space', emoji:'⌃ ⌘ Space',
+  klasör:'⇧ ⌘ G', sil:'⌘ Delete', kaydet:'⌘ S', yazdır:'⌘ P', zorla:'⌥ ⌘ Esc', pencere:'⌘ `'
+};
+
+
+
+/* Durum: her değişiklik kaydedilir */
+function load(){
+  let s = {};
+  try { s = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){}
+  const st = Object.assign({name:'', avatar:'', wall:0, img:'', scale:'m', theme:'sys', icons:{}, order:DEFAULT_ORDER.slice(), extras:[], apps:[], glass:70, sglass:70, sfx:true}, s);
+  if(!Array.isArray(st.apps)) st.apps = [];
+  if(!Array.isArray(st.extras)) st.extras = [];
+  const all = [...DEFAULT_ORDER, ...st.apps.map(a => a.id)];
+  const order = st.order.filter(id => all.includes(id));
+  all.forEach(id => { if(!order.includes(id)) order.push(id); });
+  st.order = order;
+  return st;
+}
+let state = load();
+function save(){
+  try { localStorage.setItem(KEY, JSON.stringify(state)); }
+  catch(e){ alert('Kayıt alanı dolu. Daha küçük bir fotoğraf seçmeyi dene.'); }
+}
+function esc(t){ return String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function kbs(keys){
+  return '<span class="kbs">' + keys.split(' ').filter(Boolean).map(k => `<span class="kb">${esc(k)}</span>`).join('') + '</span>';
+}
+function rowsHTML(items){
+  return '<div class="group">' + items.map(([k,d]) => `<div class="row"><span class="d">${esc(d)}</span>${kbs(k)}</div>`).join('') + '</div>';
+}
+
+const grid = $('#grid'), wall = $('#wall'), home = $('#home'), res = $('#res'), q = $('#q');
+const editBtn = $('#edit'), menuBtn = $('#menu'), popEl = $('#pop');
+const stack = [];
+let draft = {name:'', color:0, icon:''};
+
+/* Görünüm */
+function curWalls(){ return document.documentElement.dataset.theme === 'light' ? WALLS_LIGHT : WALLS_DARK; }
+function applyVars(){
+  const r = document.documentElement.style;
+  r.setProperty('--scale', SCALES[state.scale] || 1);
+  r.setProperty('--gl', state.glass / 100);
+  r.setProperty('--sgl', state.sglass / 100);
+  q.classList.toggle('plain', state.sfx === false);
+}
+function applySettings(){
+  const pref = state.theme || 'sys';
+  const dark = pref === 'sys' ? matchMedia('(prefers-color-scheme: dark)').matches : pref === 'dark';
+  document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  document.querySelector('meta[name="theme-color"]').content = dark ? '#000000' : '#F2F2F7';
+  wall.style.background = state.img ? `url("${state.img}") center/cover no-repeat` : (curWalls()[state.wall] || curWalls()[0]);
+  applyVars();
+}
+
+/* Kutucuk ve simge */
+function metaOf(id){
+  if(META[id]) return META[id];
+  const a = state.apps.find(x => x.id === id);
+  if(!a) return null;
+  return {name:a.name, g:PALETTE[a.color % PALETTE.length], svg:STAR};
+}
+function iconHTML(id){
+  const m = metaOf(id);
+  const a = state.apps.find(x => x.id === id);
+  const pic = state.icons[id] || (a && a.icon);
+  if(pic) return `<div class="ic"><img src="${pic}" alt=""></div>`;
+  return `<div class="ic" style="--g1:${m.g[0]};--g2:${m.g[1]}"><svg viewBox="0 0 24 24" fill="none">${m.svg}</svg></div>`;
+}
+function renderHome(){
+  grid.innerHTML = '';
+  state.order.forEach(id => {
+    const m = metaOf(id); if(!m) return;
+    const isApp = state.apps.some(a => a.id === id);
+    const t = document.createElement('div');
+    t.className = 'tile'; t.dataset.id = id;
+    t.innerHTML = (isApp ? `<div class="del" data-rm="${id}">−</div>` : '') + iconHTML(id) + `<div class="lbl">${esc(m.name)}</div>`;
+    grid.appendChild(t);
+  });
+}
+
+/* Ekran yığını */
+function updateUnder(){
+  stack.forEach((s,i) => {
+    const top = i === stack.length - 1;
+    s.classList.toggle('in', top);
+    s.classList.toggle('under', !top);
+  });
+  home.classList.toggle('under', stack.length > 0);
+  document.querySelector('.sbar').style.display = stack.length ? 'none' : '';
+  if(stack.length) res.style.display = 'none';
+}
+function push(title, build){
+  closePop();
+  const el = document.createElement('section');
+  el.className = 'screen';
+  el.innerHTML = `<div class="snav"><button class="back">‹ Geri</button><div class="ttl">${esc(title)}</div><span></span></div><div class="body"></div>`;
+  el.querySelector('.back').onclick = pop;
+  $('#app').appendChild(el);
+  stack.push(el);
+  build(el.querySelector('.body'));
+  attachSwipe(el);
+  requestAnimationFrame(() => requestAnimationFrame(updateUnder));
+}
+function pop(){
+  const el = stack.pop(); if(!el) return;
+  el.classList.remove('in','under');
+  setTimeout(() => el.remove(), 520);
+  updateUnder();
+}
+function attachSwipe(el){
+  let sx = null, dx = 0;
+  el.addEventListener('pointerdown', e => {
+    if(e.clientX > 28 || stack[stack.length-1] !== el) return;
+    sx = e.clientX; el.setPointerCapture(e.pointerId); el.style.transition = 'none';
+  });
+  el.addEventListener('pointermove', e => {
+    if(sx === null) return;
+    dx = Math.max(0, e.clientX - sx);
+    el.style.transform = `translateX(${dx}px)`;
+  });
+  const end = () => {
+    if(sx === null) return;
+    sx = null; el.style.transition = ''; el.style.transform = '';
+    if(dx > 90) pop();
+    dx = 0;
+  };
+  el.addEventListener('pointerup', end);
+  el.addEventListener('pointercancel', end);
+}
+
+/* Açılır menü ve düzenleme modu */
+function closePop(){ popEl.classList.remove('open'); }
+function setEditing(on){
+  document.body.classList.toggle('editing', on);
+  editBtn.textContent = on ? 'Bitti' : 'Düzenle';
+  closePop();
+}
+editBtn.onclick = () => setEditing(!document.body.classList.contains('editing'));
+menuBtn.onclick = e => { e.stopPropagation(); popEl.classList.toggle('open'); };
+popEl.addEventListener('click', e => {
+  e.stopPropagation();
+  const b = e.target.closest('[data-m]'); if(!b) return;
+  closePop();
+  if(b.dataset.m === 'profile') push('Profil', renderProfile);
+  else push('Ayarlar', renderSettings);
+});
+document.addEventListener('click', closePop);
+
+/* Ekranlar */
+function openScreen(id){
+  if(id === 'ekstra') return push('Ekstra Kısayollar', renderExtras);
+  if(id === 'ayarlar') return push('Ayarlar', renderSettings);
+  if(SECTIONS[id]){
+    const s = SECTIONS[id];
+    return push(s.name, b => { b.innerHTML = rowsHTML(s.items) + (s.tip ? `<div class="tip"><b>İpucu:</b> ${esc(s.tip)}</div>` : ''); });
+  }
+  const a = state.apps.find(x => x.id === id);
+  if(a) push(a.name, b => renderApp(b, a));
+}
+function renderExtras(body){
+  const list = state.extras.length
+    ? '<div class="group">' + state.extras.map((x,i) =>
+        `<div class="row"><span class="d">${esc(x.name)}${x.desc ? `<small>${esc(x.desc)}</small>` : ''}</span>${kbs(x.keys)}<button class="link-del" data-del="${i}">Sil</button></div>`).join('') + '</div>'
+    : '<div class="group"><div class="row"><span class="d" style="color:var(--sub)">Henüz ekstra kısayol yok</span></div></div>';
+  body.innerHTML = `
+    <div class="sec">Yeni kısayol</div>
+    <div class="group pad">
+      <input id="xn" placeholder="Ne yapar? (örn. Ekran kilidi)" maxlength="40">
+      <input id="xk" placeholder="Tuşlar (örn. ⌘ ⇧ K)" maxlength="30">
+      <input id="xd" placeholder="Açıklama (isteğe bağlı)" maxlength="60">
+      <button class="btn" id="xadd">Ekle</button>
+    </div>
+    <div class="sec">Eklediklerin</div>${list}`;
+  body.querySelector('#xadd').onclick = () => {
+    const name = body.querySelector('#xn').value.trim();
+    const keys = body.querySelector('#xk').value.trim();
+    const desc = body.querySelector('#xd').value.trim();
+    if(!name || !keys) return alert('Ad ve tuş alanları zorunlu.');
+    state.extras.push({name, keys, desc}); save(); renderExtras(body);
+  };
+  body.querySelectorAll('[data-del]').forEach(b => b.onclick = () => {
+    state.extras.splice(+b.dataset.del, 1); save(); renderExtras(body);
+  });
+}
+function renderApp(body, a){
+  const rows = a.items.length
+    ? '<div class="group">' + a.items.map((x,i) => `<div class="row"><span class="d">${esc(x.desc || '—')}</span>${kbs(x.keys)}<button class="link-del" data-d="${i}">Sil</button></div>`).join('') + '</div>'
+    : '<div class="group"><div class="row"><span class="d" style="color:var(--sub)">Henüz kısayol yok</span></div></div>';
+  body.innerHTML = `
+    <div class="sec">Yeni kısayol</div>
+    <div class="group pad">
+      <input id="ak" placeholder="Tuşlar (örn. ⌘ ⇧ K)" maxlength="30">
+      <input id="ad" placeholder="Ne yapar?" maxlength="60">
+      <button class="btn" id="aadd">Ekle</button>
+    </div>
+    <div class="sec">Kısayollar</div>${rows}
+    <div class="sec">Kutucuk</div>
+    <div class="group pad"><button class="btn danger" id="adel">Bu kutucuğu sil</button></div>`;
+  body.querySelector('#aadd').onclick = () => {
+    const k = body.querySelector('#ak').value.trim(), d = body.querySelector('#ad').value.trim();
+    if(!k) return alert('Tuş alanı zorunlu.');
+    a.items.push({keys:k, desc:d}); save(); renderApp(body, a);
+  };
+  body.querySelectorAll('[data-d]').forEach(b => b.onclick = () => {
+    a.items.splice(+b.dataset.d, 1); save(); renderApp(body, a);
+  });
+  body.querySelector('#adel').onclick = () => {
+    if(!confirm('Kutucuk silinsin mi?')) return;
+    deleteApp(a.id); pop();
+  };
+}
+function deleteApp(id){
+  state.apps = state.apps.filter(x => x.id !== id);
+  state.order = state.order.filter(x => x !== id);
+  save(); renderHome();
+}
+
+/* Fotoğraf yardımcıları */
+function readImage(file, cb){
+  const r = new FileReader();
+  r.onload = () => { const img = new Image(); img.onload = () => cb(img); img.src = r.result; };
+  r.readAsDataURL(file);
+}
+function compressWall(file, cb){
+  readImage(file, img => {
+    const k = Math.min(1, 1080 / Math.max(img.width, img.height));
+    const c = document.createElement('canvas');
+    c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+    c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+    cb(c.toDataURL('image/jpeg', .8));
+  });
+}
+function compressSquare(file, cb){
+  readImage(file, img => {
+    const c = document.createElement('canvas'); c.width = 256; c.height = 256;
+    const s = Math.min(img.width, img.height);
+    c.getContext('2d').drawImage(img, (img.width-s)/2, (img.height-s)/2, s, s, 0, 0, 256, 256);
+    cb(c.toDataURL('image/png'));
+  });
+}
+function hasIcon(id){
+  const a = state.apps.find(x => x.id === id);
+  return !!(a ? a.icon : state.icons[id]);
+}
+function setIcon(id, data){
+  const a = state.apps.find(x => x.id === id);
+  if(a) a.icon = data; else state.icons[id] = data;
+}
+function resetIcon(id){
+  const a = state.apps.find(x => x.id === id);
+  if(a) delete a.icon; else delete state.icons[id];
+}
+
+/* Profil */
+function renderProfile(body){
+  const initial = (state.name || 'K').trim().charAt(0).toUpperCase();
+  body.innerHTML = `
+    <div class="pav">${state.avatar ? `<img src="${state.avatar}" alt="">` : `<span>${esc(initial)}</span>`}</div>
+    <div class="group pad" style="margin-top:.8rem">
+      <label class="btn ghost">Fotoğraf seç<input type="file" id="avf" accept="image/*" hidden></label>
+      ${state.avatar ? '<button class="btn ghost" id="avr">Fotoğrafı kaldır</button>' : ''}
+    </div>
+    <div class="sec">Ad</div>
+    <div class="group pad"><input id="nm" placeholder="Adın" value="${esc(state.name)}" maxlength="24"></div>
+    <p class="note">Değişiklikler otomatik kaydedilir.</p>`;
+  body.querySelector('#nm').oninput = e => {
+    state.name = e.target.value.trim(); save();
+    if(!state.avatar) body.querySelector('.pav span').textContent = (state.name || 'K').charAt(0).toUpperCase();
+  };
+  body.querySelector('#avf').onchange = e => {
+    const f = e.target.files[0]; if(!f) return;
+    compressSquare(f, data => { state.avatar = data; save(); renderProfile(body); });
+  };
+  const avr = body.querySelector('#avr');
+  if(avr) avr.onclick = () => { state.avatar = ''; save(); renderProfile(body); };
+}
+
+/* Ayarlar */
+function themeHTML(){
+  const cur = state.theme || 'sys';
+  return `<div class="sec">Tema</div><div class="group pad"><div class="seg">${[['sys','Sistem'],['light','Açık'],['dark','Koyu']].map(([k,l]) =>
+    `<button data-th="${k}" class="${cur===k ? 'on' : ''}">${l}</button>`).join('')}</div></div>`;
+}
+function appListHTML(){
+  if(!state.apps.length) return '<div class="group"><div class="row"><span class="d" style="color:var(--sub)">Henüz kendi kutucuğun yok</span></div></div>';
+  return '<div class="group">' + state.apps.map(a =>
+    `<div class="row"><span class="d">${esc(a.name)}</span><button class="link-del" data-delapp="${a.id}">Sil</button></div>`).join('') + '</div>';
+}
+function iconRowsHTML(){
+  return '<div class="group">' + state.order.map(id => {
+    const m = metaOf(id);
+    return `<div class="row"><span class="d">${esc(m.name)}</span>${hasIcon(id) ? `<button class="link-set" data-iconreset="${id}">Sıfırla</button>` : ''}<label class="link-set">Değiştir<input type="file" accept="image/*" data-icon="${id}" hidden></label></div>`;
+  }).join('') + '</div>';
+}
+function renderSettings(body){
+  body.innerHTML = `
+    ${themeHTML()}
+    <div class="sec">Arka plan</div>
+    <div class="group pad">
+      <div class="swatches">${curWalls().map((w,i) => `<div class="sw ${!state.img && state.wall===i ? 'on' : ''}" data-w="${i}" style="background:${w}"></div>`).join('')}</div>
+      <label class="btn ghost">Kendi fotoğrafını seç<input type="file" id="pic" accept="image/*" hidden></label>
+      ${state.img ? '<button class="btn ghost" id="picr">Fotoğrafı kaldır</button>' : ''}
+    </div>
+    <div class="sec">Şeffaflık</div>
+    <div class="group pad">
+      <div class="lab"><span>Ana kutu opaklığı</span><b id="gv">${state.glass}%</b></div>
+      <input type="range" id="gl" min="0" max="100" value="${state.glass}">
+      <div class="lab"><span>Arama kutusu opaklığı</span><b id="sv">${state.sglass}%</b></div>
+      <input type="range" id="sgl" min="0" max="100" value="${state.sglass}">
+    </div>
+    <p class="note">0 yaparsan kutu tamamen kalkar.</p>
+    <div class="group pad"><label class="lab" style="cursor:pointer"><span>Arama kutusu camsı efekt</span><input type="checkbox" id="sfx" style="accent-color:var(--accent);width:1.6rem;height:1.6rem" ${state.sfx!==false?'checked':''}></label></div>
+    <div class="sec">Yazı boyutu</div>
+    <div class="group pad"><div class="seg">${Object.keys(SCALES).map(k =>
+      `<button data-sc="${k}" class="${state.scale===k ? 'on' : ''}">${k.toUpperCase()}</button>`).join('')}</div></div>
+    <div class="sec">Yeni kutucuk ekle</div>
+    <div class="group pad">
+      <input id="cn" placeholder="Kutucuk adı" maxlength="18" value="${esc(draft.name)}">
+      <div class="pal">${PALETTE.map((p,i) => `<div data-pal="${i}" class="${draft.color===i ? 'on' : ''}" style="background:linear-gradient(160deg,${p[0]},${p[1]})"></div>`).join('')}</div>
+      <label class="btn ghost">${draft.icon ? 'Fotoğraf seçildi' : 'Fotoğraf ekle (isteğe bağlı)'}<input type="file" id="cpic" accept="image/*" hidden></label>
+      <button class="btn" id="cadd">Ana ekrana ekle</button>
+    </div>
+    <div class="sec">Kendi kutucukların</div>
+    ${appListHTML()}
+    <div class="sec">Simgeler</div>
+    ${iconRowsHTML()}
+    <div class="sec">Sıfırla</div>
+    <div class="group pad"><button class="btn danger" id="rst">Tüm ayarları ve kısayolları sıfırla</button></div>
+    <div class="sec">Geliştirici</div>
+    <div class="group dev pad"><b>Onur Bekir Çalgın</b><span>Claude ile geliştirilmiştir</span></div>`;
+
+  body.querySelectorAll('[data-th]').forEach(b => b.onclick = () => { state.theme = b.dataset.th; save(); applySettings(); renderSettings(body); });
+  body.querySelectorAll('[data-w]').forEach(s => s.onclick = () => { state.wall = +s.dataset.w; state.img = ''; save(); applySettings(); renderSettings(body); });
+  body.querySelector('#pic').onchange = e => { const f = e.target.files[0]; if(!f) return;
+    compressWall(f, data => { state.img = data; save(); applySettings(); renderSettings(body); }); };
+  const picr = body.querySelector('#picr');
+  if(picr) picr.onclick = () => { state.img = ''; save(); applySettings(); renderSettings(body); };
+
+  body.querySelector('#gl').oninput = e => { state.glass = +e.target.value; body.querySelector('#gv').textContent = state.glass + '%'; save(); applyVars(); };
+  body.querySelector('#sfx').onchange = e => { state.sfx = e.target.checked; save(); applyVars(); };
+  body.querySelector('#sgl').oninput = e => { state.sglass = +e.target.value; body.querySelector('#sv').textContent = state.sglass + '%'; save(); applyVars(); };
+  body.querySelectorAll('[data-sc]').forEach(b => b.onclick = () => { state.scale = b.dataset.sc; save(); applyVars(); renderSettings(body); });
+
+  body.querySelector('#cn').oninput = e => { draft.name = e.target.value; };
+  body.querySelectorAll('[data-pal]').forEach(p => p.onclick = () => { draft.color = +p.dataset.pal; renderSettings(body); });
+  body.querySelector('#cpic').onchange = e => { const f = e.target.files[0]; if(!f) return;
+    compressSquare(f, data => { draft.icon = data; renderSettings(body); }); };
+  body.querySelector('#cadd').onclick = () => {
+    const name = (body.querySelector('#cn').value || '').trim();
+    if(!name) return alert('Bir kutucuk adı yaz.');
+    const id = 'c_' + Date.now().toString(36);
+    state.apps.push({id, name, color: draft.color, icon: draft.icon || '', items: []});
+    state.order.push(id);
+    draft = {name:'', color:0, icon:''};
+    save(); renderHome(); renderSettings(body);
+  };
+  body.querySelectorAll('[data-delapp]').forEach(b => b.onclick = () => {
+    if(!confirm('Bu kutucuk silinsin mi?')) return;
+    deleteApp(b.dataset.delapp); renderSettings(body);
+  });
+
+  body.querySelectorAll('[data-icon]').forEach(inp => inp.onchange = e => {
+    const f = e.target.files[0]; if(!f) return;
+    compressSquare(f, data => { setIcon(inp.dataset.icon, data); save(); renderHome(); renderSettings(body); });
+  });
+  body.querySelectorAll('[data-iconreset]').forEach(b => b.onclick = () => {
+    resetIcon(b.dataset.iconreset); save(); renderHome(); renderSettings(body);
+  });
+  body.querySelector('#rst').onclick = () => {
+    if(!confirm('Tüm kayıtlar silinsin mi?')) return;
+    localStorage.removeItem(KEY); location.reload();
+  };
+}
+
+/* Ana ekran: düzenleme modunda taşıma, değilse dokunma */
+let cand = null, dragEl = null, target = null, sx0 = 0, sy0 = 0, dragged = false;
+function nearest(x, y){
+  let best = null, bd = 1e9;
+  grid.querySelectorAll('.tile').forEach(t => {
+    if(t === dragEl) return;
+    const r = t.getBoundingClientRect();
+    const d = Math.hypot(x - (r.left + r.width/2), y - (r.top + r.height/2));
+    if(d < bd){ bd = d; best = t; }
+  });
+  return bd < 52 ? best : null;
+}
+grid.addEventListener('pointerdown', e => {
+  if(e.target.closest('.del')) return;
+  const t = e.target.closest('.tile'); if(!t) return;
+  cand = t; sx0 = e.clientX; sy0 = e.clientY; dragged = false;
+});
+grid.addEventListener('pointermove', e => {
+  if(!cand) return;
+  if(!dragEl){
+    if(!document.body.classList.contains('editing')) return;
+    if(Math.hypot(e.clientX - sx0, e.clientY - sy0) < 6) return;
+    dragEl = cand; dragged = true; dragEl.classList.add('drag');
+    try { grid.setPointerCapture(e.pointerId); } catch(_){}
+  }
+  dragEl.style.transform = `translate(${e.clientX - sx0}px, ${e.clientY - sy0}px) scale(1.06)`;
+  const nt = nearest(e.clientX, e.clientY);
+  if(target && target !== nt) target.classList.remove('target');
+  target = nt;
+  if(nt) nt.classList.add('target');
+});
+function endPointer(){
+  if(dragEl){
+    if(target){
+      const id = dragEl.dataset.id, tid = target.dataset.id;
+      state.order.splice(state.order.indexOf(id), 1);
+      state.order.splice(state.order.indexOf(tid), 0, id);
+      save();
+    }
+    dragEl.classList.remove('drag');
+    dragEl = null; target = null;
+    renderHome();
+  }
+  cand = null;
+}
+grid.addEventListener('pointerup', endPointer);
+grid.addEventListener('pointercancel', endPointer);
+grid.addEventListener('click', e => {
+  const del = e.target.closest('.del');
+  if(del){
+    e.stopPropagation();
+    if(confirm('Bu kutucuk silinsin mi?')) deleteApp(del.dataset.rm);
+    return;
+  }
+  if(dragged){ dragged = false; return; }
+  if(document.body.classList.contains('editing')) return;
+  const t = e.target.closest('.tile');
+  if(t) openScreen(t.dataset.id);
+});
+
+/* Arama ve yerel asistan (dış servis kullanmaz) */
+function allItems(){
+  const list = [];
+  Object.values(SECTIONS).forEach(s => s.items.forEach(([k,d]) => list.push({k, d, src: s.name})));
+  state.extras.forEach(x => list.push({k: x.keys, d: x.name + (x.desc ? ' ' + x.desc : ''), src: 'Ekstra'}));
+  state.apps.forEach(a => a.items.forEach(x => list.push({k: x.keys, d: x.desc || a.name, src: a.name})));
+  return list;
+}
+function answer(text){
+  const words = text.toLowerCase().split(/\s+/).filter(Boolean);
+  const aliasKeys = Object.keys(ALIAS).filter(a => words.some(w => w.startsWith(a)));
+  const hits = [];
+  allItems().forEach(it => {
+    const hay = (it.d + ' ' + it.k + ' ' + it.src).toLowerCase();
+    let score = 0;
+    words.forEach(w => { if(hay.includes(w)) score += 2; });
+    aliasKeys.forEach(a => { if(it.k.includes(ALIAS[a])) score += 3; });
+    if(score > 0) hits.push({...it, score});
+  });
+  return hits.sort((a,b) => b.score - a.score).slice(0, 12);
+}
+q.addEventListener('input', () => {
+  const v = q.value.trim();
+  if(!v){ res.style.display = 'none'; return; }
+  const hits = answer(v);
+  res.style.display = 'block';
+  res.innerHTML = hits.length
+    ? '<div class="group" style="margin:0;border-radius:1rem">' + hits.map(h =>
+        `<div class="row"><span class="d">${esc(h.d)}<small>${esc(h.src)}</small></span>${kbs(h.k)}</div>`).join('') + '</div>'
+    : '<div class="empty">Eşleşme yok. "kopyala", "ekran", "sekme" gibi kısa kelimeler dene.</div>';
+});
+q.addEventListener('keydown', e => { if(e.key === 'Enter') q.blur(); });
+
+/* Başlangıç */
+applySettings();
+renderHome();
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { if((state.theme || 'sys') === 'sys') applySettings(); });
+</script>
+</body>
+</html>
