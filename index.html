@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Kısayollar">
+<meta name="theme-color" content="#000000">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>Kısayollar</title>
+<style>
+:root{--scale:1;--gl:.7;--sgl:.7;--bg:#000;--txt:#fff;--nav:rgba(28,28,30,.85);--card:#1c1c1e;--card-txt:#ebebf5;--sub:#8e8e93;--field:#2c2c2e;--kb:#3a3a3c;--kbtxt:#fff;--sep:rgba(255,255,255,.12);--seg-on:#636366;--tsh:0 1px 3px rgba(0,0,0,.5);--accent:#0a84ff}
+html[data-theme="light"]{--bg:#f2f2f7;--txt:#000;--nav:rgba(246,246,248,.85);--card:#fff;--card-txt:#000;--sub:#6e6e73;--field:#e9e9ef;--kb:#fff;--kbtxt:#1d1d1f;--sep:rgba(0,0,0,.1);--seg-on:#fff;--accent:#007aff}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;overflow:hidden}
+html{font-size:calc(16px*var(--scale))}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",sans-serif;color:var(--txt);background:var(--bg);-webkit-font-smoothing:antialiased;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none}
+#wall{position:fixed;inset:0;background:#0b0f1e;transition:background .4s ease}
+#app{position:fixed;inset:0;overflow:hidden}
+#home{position:absolute;inset:0;padding:calc(env(safe-area-inset-top,0px) + 2.6rem) 1.1rem 6.5rem;transition:transform .45s cubic-bezier(.2,.8,.2,1);z-index:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+#home::after,.screen::after{content:'';position:absolute;inset:0;background:#000;opacity:0;pointer-events:none;transition:opacity .45s}
+#home.under{transform:translateX(-22%) scale(.97)}
+#home.under::after{opacity:.35}
+.head{display:flex;align-items:center;justify-content:space-between}
+h1.title{font-size:2rem;font-weight:700;letter-spacing:-.02em;margin:0;text-shadow:0 1px 3px rgba(0,0,0,.25)}
+.avatar{width:2.5rem;height:2.5rem;border-radius:50%;overflow:hidden;background:linear-gradient(160deg,#7C7EFF,#4A3BE0);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:1rem;color:#fff;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.avatar img{width:100%;height:100%;object-fit:cover}
+
+/* Liquid glass kutu */
+.glass{position:relative;margin-top:1.6rem;border-radius:2.2rem;padding:1.1rem .5rem 1.3rem;overflow:hidden;
+  background:linear-gradient(145deg,rgba(255,255,255,calc(var(--gl)*.30)),rgba(255,255,255,calc(var(--gl)*.06)));
+  -webkit-backdrop-filter:blur(calc(var(--gl)*26px)) saturate(calc(1 + var(--gl)*.8));
+  backdrop-filter:blur(calc(var(--gl)*26px)) saturate(calc(1 + var(--gl)*.8));
+  border:1px solid rgba(255,255,255,calc(var(--gl)*.35));
+  box-shadow:inset 0 1px 1px rgba(255,255,255,calc(var(--gl)*.6)),0 calc(var(--gl)*12px) calc(var(--gl)*32px) rgba(0,0,0,calc(var(--gl)*.25))}
+.glass::before{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(180deg,rgba(255,255,255,calc(var(--gl)*.2)) 0%,transparent 42%);pointer-events:none}
+.grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);row-gap:1.5rem;column-gap:.2rem}
+.tile{display:flex;flex-direction:column;align-items:center;gap:.45rem;cursor:pointer;touch-action:none;position:relative;transition:transform .2s}
+.ic{width:4.3rem;height:4.3rem;border-radius:22.37%;position:relative;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,var(--g1),var(--g2));box-shadow:0 .5rem 1rem rgba(0,0,0,.38),inset 0 0 0 .5px rgba(255,255,255,.3);overflow:hidden}
+.ic::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.34),rgba(255,255,255,0) 50%)}
+.ic::after{content:'';position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 -.12rem .3rem rgba(0,0,0,.18)}
+.ic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ic svg{width:2.7rem;height:2.7rem;position:relative;filter:drop-shadow(0 1px 1.5px rgba(0,0,0,.25))}
+.lbl{font-size:.72rem;color:var(--txt);text-shadow:0 1px 3px rgba(0,0,0,.55);max-width:5.2rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
+.tile.drag{z-index:9;opacity:.92}
+.tile.target .ic{box-shadow:0 0 0 .18rem rgba(255,255,255,.8)}
+.tile.wig .ic{animation:wig .3s ease-in-out infinite alternate}
+@keyframes wig{from{transform:rotate(-1.5deg)}to{transform:rotate(1.5deg)}}
+
+/* Arama */
+.sbar{position:fixed;left:1rem;right:1rem;bottom:calc(env(safe-area-inset-bottom,0px) + .8rem);z-index:20}
+.sbar input{background:rgba(255,255,255,calc(var(--sgl)*.22));-webkit-backdrop-filter:blur(calc(var(--sgl)*22px)) saturate(calc(1 + var(--sgl)*.8));backdrop-filter:blur(calc(var(--sgl)*22px)) saturate(calc(1 + var(--sgl)*.8));border:1px solid rgba(255,255,255,calc(var(--sgl)*.3));box-shadow:0 .4rem 1.4rem rgba(0,0,0,calc(var(--sgl)*.25));color:var(--txt);border-radius:1.2rem;padding:.8rem 1rem}
+.sbar input::placeholder{color:var(--sub)}
+.res{position:fixed;left:1rem;right:1rem;bottom:calc(env(safe-area-inset-bottom,0px) + 4.6rem);max-height:52dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;background:var(--card);border-radius:1rem;box-shadow:0 .5rem 2rem rgba(0,0,0,.3);z-index:20;display:none}
+.res .empty{padding:.9rem;color:var(--sub);font-size:.85rem;text-align:center}
+
+/* Ekranlar */
+.screen{position:absolute;inset:0;background:var(--bg);color:var(--txt);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .45s cubic-bezier(.2,.8,.2,1);box-shadow:-.5rem 0 1.5rem rgba(0,0,0,.45);contain:layout paint;z-index:5}
+.screen.in{transform:translateX(0)}
+.screen.under{transform:translateX(-22%)}
+.screen.under::after{opacity:.35}
+.nav{flex:none;display:flex;align-items:center;justify-content:space-between;padding:calc(env(safe-area-inset-top,0px) + .6rem) .9rem .6rem;background:var(--nav);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:.5px solid var(--sep)}
+.nav .ttl{font-size:1rem;font-weight:600}
+.nav .back{background:none;border:none;color:var(--accent);font-size:1rem;padding:.4rem .2rem;min-width:4.5rem;text-align:left}
+.nav .sp{min-width:4.5rem}
+.body{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:.6rem 1rem calc(env(safe-area-inset-bottom,0px) + 2rem)}
+.sec{font-size:.72rem;color:var(--sub);text-transform:uppercase;letter-spacing:.04em;margin:.9rem .8rem .4rem}
+.group{background:var(--card);border-radius:.9rem;overflow:hidden;margin-bottom:.4rem}
+.row{display:flex;align-items:center;justify-content:space-between;gap:.6rem;padding:.7rem .9rem;border-top:.5px solid var(--sep)}
+.row:first-child{border-top:none}
+.d{font-size:.92rem;color:var(--card-txt);flex:1;min-width:0}
+.d small{display:block;color:var(--sub);font-size:.75rem;margin-top:.1rem}
+.kbs{display:flex;gap:.25rem;flex-wrap:wrap;justify-content:flex-end}
+.kb{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.7rem;background:var(--kb);color:var(--kbtxt);border-radius:.4rem;padding:.2rem .42rem;white-space:nowrap;box-shadow:0 1px 0 #000}
+.tip{background:var(--card);border-radius:.9rem;padding:.8rem .9rem;font-size:.85rem;line-height:1.45;color:var(--card-txt);margin-top:.6rem}
+.tip b{color:#ffd60a}
+input{width:100%;background:var(--field);border:none;border-radius:.6rem;padding:.7rem .8rem;color:var(--txt);font-size:1rem;outline:none;font-family:inherit}
+input::placeholder{color:var(--sub)}
+input[type=range]{accent-color:var(--accent);background:none;padding:.3rem 0}
+.pad{padding:.7rem;display:flex;flex-direction:column;gap:.5rem}
+.lab{display:flex;justify-content:space-between;color:var(--card-txt);font-size:.92rem}
+.lab b{font-weight:600;color:var(--sub)}
+.btn{display:block;width:100%;background:var(--accent);border:none;color:#fff;border-radius:.7rem;padding:.7rem 1rem;font-size:1rem;font-weight:600;text-align:center;font-family:inherit}
+.btn.ghost{background:var(--field);color:var(--txt)}
+.btn.danger{background:#ff453a}
+.small-del{background:none;border:none;color:#ff453a;font-size:.85rem;padding:.3rem;font-family:inherit}
+.seg{display:flex;background:var(--field);border-radius:.6rem;padding:.2rem}
+.seg button{flex:1;background:none;border:none;color:var(--txt);padding:.5rem 0;border-radius:.45rem;font-size:.9rem;font-family:inherit}
+.seg button.on{background:var(--seg-on)}
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem}
+.sw{aspect-ratio:9/16;border-radius:.6rem;border:2px solid transparent}
+.sw.on{border-color:var(--txt)}
+.pal{display:grid;grid-template-columns:repeat(6,1fr);gap:.5rem}
+.pal div{aspect-ratio:1;border-radius:50%;border:2px solid transparent}
+.pal div.on{border-color:var(--txt)}
+.dev{text-align:center;gap:.2rem;padding:1rem}
+.dev b{font-size:1rem}
+.dev span{color:var(--sub);font-size:.8rem}
+.note{font-size:.75rem;color:var(--sub);text-align:center;margin-top:.8rem}
+</style>
+</head>
+<body>
+<div id="wall"></div>
+<div id="app">
+  <section id="home">
+    <div class="head">
+      <h1 class="title">Kısayollar</h1>
+      <div class="avatar" id="avatar"></div>
+    </div>
+    <div class="glass" id="glass"><div class="grid" id="grid"></div></div>
+  </section>
+</div>
+<div class="res" id="res"></div>
+<div class="sbar"><input id="q" type="search" placeholder="Kısayol ara veya sor (örn. kopyala)" autocomplete="off" enterkeyhint="search"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+const KEY = 'kisayol-app-v3';
+const DEFAULT_ORDER = ['sistem','shot','finder','metin','safari','bilgi','ekstra','ayarlar'];
+const SCALES = {s:.9, m:1, l:1.15, xl:1.3};
+const WALLS_DARK = [
+  'radial-gradient(120% 80% at 20% 0%,#1c3a6e 0%,#0b0f1e 55%,#05060c 100%)',
+  'linear-gradient(160deg,#4b2a7b 0%,#1a0f35 60%,#07050f 100%)',
+  'linear-gradient(170deg,#ff9a5a 0%,#ff5e7e 45%,#5b2a86 100%)',
+  'linear-gradient(160deg,#1f5c46 0%,#0a2a20 60%,#030f0b 100%)',
+  'linear-gradient(170deg,#4a4f5c 0%,#1d2029 60%,#0b0d12 100%)'
+];
+const WALLS_LIGHT = [
+  'linear-gradient(180deg,#ffffff 0%,#e5e5ea 100%)',
+  'linear-gradient(160deg,#f5f5f7 0%,#d1d5dc 100%)',
+  'linear-gradient(170deg,#eef3fb 0%,#c7d3e6 100%)',
+  'linear-gradient(170deg,#fbf6ef 0%,#e0d5c5 100%)',
+  'linear-gradient(170deg,#e9ecef 0%,#b9c0c7 100%)'
+];
+const PALETTE = [['#FF7AA2','#E0306A'],['#5ED890','#1A9A58'],['#6CC8FF','#2268E0'],['#C9A2FF','#7B3FE4'],['#FFD27A','#F08A1C'],['#9AAABE','#4F6378']];
+const TEETH = [...Array(8)].map((_,i) => `<rect x="10.4" y="1.4" width="3.2" height="4.4" rx="1" transform="rotate(${i*45} 12 12)"/>`).join('');
+const STAR = '<path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1.1 5.8L12 16.8l-5.3 2.8 1.1-5.8L3.5 9.7l5.9-.8z" fill="#fff"/>';
+
+const META = {
+  sistem:{name:'Sistem', g:['#7C7EFF','#4A3BE0'], svg:
+    '<rect x="2.5" y="3.5" width="19" height="13.5" rx="2.6" fill="#fff"/><rect x="4.6" y="5.6" width="14.8" height="9.3" rx="1.2" fill="rgba(20,20,60,.35)"/><path d="M4.6 12.4l4-3.4 3 2.4 2.6-2.1 5.2 4.1v1.8H4.6z" fill="#fff" opacity=".85"/><rect x="9" y="18" width="6" height="1.8" rx=".9" fill="#fff"/><rect x="6.5" y="20" width="11" height="1.5" rx=".75" fill="#fff" opacity=".75"/>'},
+  shot:{name:'Ekran', g:['#43E08F','#11924F'], svg:
+    '<circle cx="12" cy="12" r="8.6" fill="none" stroke="#fff" stroke-width="2"/><path d="M12 2.2v4M12 17.8v4M2.2 12h4M17.8 12h4" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="4.2" fill="#fff"/><circle cx="13.4" cy="10.6" r="1.1" fill="rgba(0,60,30,.35)"/>'},
+  finder:{name:'Finder', g:['#5BC4FF','#1A6BE6'], svg:
+    '<path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h4.1l2 2.3h6.9A2.5 2.5 0 0 1 21 8.8V18a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 3 18z" fill="#fff"/><rect x="3" y="10" width="18" height="2.2" fill="rgba(0,40,120,.14)"/><rect x="6.5" y="13.6" width="6.5" height="1.7" rx=".85" fill="rgba(0,40,120,.3)"/><rect x="6.5" y="16.4" width="10.5" height="1.7" rx=".85" fill="rgba(0,40,120,.22)"/>'},
+  metin:{name:'Metin', g:['#D8A0FF','#7A3FE8'], svg:
+    '<path d="M6.5 2.8h7.6l4.4 4.4V19.5a2 2 0 0 1-2 2H6.5a2 2 0 0 1-2-2V4.8a2 2 0 0 1 2-2z" fill="#fff"/><path d="M14.1 2.8v4.4h4.4z" fill="rgba(60,0,120,.2)"/><rect x="7" y="10" width="8" height="1.7" rx=".85" fill="rgba(60,0,120,.35)"/><rect x="7" y="13.5" width="10" height="1.7" rx=".85" fill="rgba(60,0,120,.28)"/><rect x="7" y="17" width="6" height="1.7" rx=".85" fill="rgba(60,0,120,.22)"/>'},
+  safari:{name:'Safari', g:['#4DD8E8','#0B8FB8'], svg:
+    '<circle cx="12" cy="12" r="9.2" fill="#fff"/><circle cx="12" cy="12" r="7.4" fill="none" stroke="rgba(0,80,100,.22)" stroke-width="1"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z" fill="#ff4d3d"/><path d="M8.4 15.6l2.1-5.1 5.1-2.1-2.1 5.1z" fill="rgba(0,60,80,.4)"/>'},
+  bilgi:{name:'Biliyor muydun', g:['#FFC861','#FF6B3D'], svg:
+    '<path d="M12 3.4a6.3 6.3 0 0 0-3.7 11.4c.6.5.9 1.1.9 1.8v.4h5.6v-.4c0-.7.3-1.3.9-1.8A6.3 6.3 0 0 0 12 3.4z" fill="#fff"/><rect x="9.2" y="17.8" width="5.6" height="1.8" rx=".9" fill="#fff"/><rect x="10.2" y="20.4" width="3.6" height="1.5" rx=".75" fill="#fff" opacity=".8"/><path d="M12 .9v1.2M4.4 4.2l.8.8M19.6 4.2l-.8.8" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/>'},
+  ekstra:{name:'Ekstra', g:['#A9B4C6','#5D6A80'], svg:
+    '<rect x="3" y="3" width="18" height="18" rx="5.2" fill="rgba(255,255,255,.22)"/><path d="M12 7v10M7 12h10" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>'},
+  ayarlar:{name:'Ayarlar', g:['#C9CED8','#6E7787'], svg:
+    '<g fill="#fff">'+TEETH+'<circle cx="12" cy="12" r="7.2"/></g><circle cx="12" cy="12" r="3" fill="rgba(40,46,60,.55)"/>'}
+};
+
+const SECTIONS = {
+  sistem:{name:'Sistem', items:[
+    ['⌘ Space','Spotlight'],['⌘ Tab','Uygulamalar arası geçiş'],['⌘ `','Aynı uygulamanın pencereleri'],
+    ['⌘ W','Pencereyi kapat'],['⌘ Q','Uygulamadan çık'],['⌘ M','Pencereyi küçült'],['⌘ H','Uygulamayı gizle'],
+    ['⌥ ⌘ H','Diğerlerini gizle'],['⌃ ↑','Mission Control'],['⌃ ↓','Uygulamanın pencereleri'],
+    ['⌃ ← →','Masaüstü değiştir'],['⌃ ⌘ F','Tam ekran'],['⌃ ⌘ Space','Emoji ve simgeler'],
+    ['⌃ ⌘ Q','Ekranı kilitle'],['⌥ ⌘ D','Dock gizle / göster'],['⇧ ⌘ Q','Oturumu kapat'],
+    ['⌥ ⌘ Esc','Uygulamayı zorla kapat'],['F11','Masaüstünü göster']
+  ], tip:'Mission Control’de ⌃ ↑ ile açılan ekranda oklarla gezinip Return ile pencereye geç.'},
+  shot:{name:'Ekran Görüntüsü', items:[
+    ['⇧ ⌘ 3','Tüm ekran'],['⇧ ⌘ 4','Seçilen alan'],['⇧ ⌘ 4 Space','Tek pencere'],['⇧ ⌘ 5','Araç çubuğu ve kayıt']
+  ], tip:'Control basılıyken ekran görüntüsü alırsan masaüstüne değil panoya kopyalanır.'},
+  finder:{name:'Finder', items:[
+    ['⌘ N','Yeni Finder penceresi'],['⇧ ⌘ G','Klasöre git'],['⇧ ⌘ H','Ana klasör'],['⇧ ⌘ D','Masaüstü'],
+    ['⇧ ⌘ A','Uygulamalar'],['⇧ ⌘ N','Yeni klasör'],['⌘ ↑ ↓','Üst klasör / seçileni aç'],
+    ['Return','Yeniden adlandır'],['Space','Hızlı önizleme'],['⌘ I','Bilgi al'],['⌘ Delete','Çöpe taşı'],
+    ['⇧ ⌘ Delete','Çöpü boşalt']
+  ], tip:'Çöpe atmadan kalıcı silmek için ⌥ ⌘ Delete kullanabilirsin.'},
+  metin:{name:'Metin Düzenleme', items:[
+    ['⌘ A','Tümünü seç'],['⌘ C X V','Kopyala / Kes / Yapıştır'],['⌘ Z','Geri al'],['⇧ ⌘ Z','Yinele'],
+    ['⌘ S P','Kaydet / Yazdır'],['⌘ B I U','Kalın / İtalik / Altı çizili'],['⌥ ← →','Kelime kelime'],
+    ['⌘ ← →','Satır başı / sonu'],['⌘ ↑ ↓','Belge başı / sonu'],['⌥ Delete','Kelime sil'],
+    ['⇧ + ok','Seçimi genişlet'],['⌥ ⌘ F','Bul ve değiştir'],['⌘ G','Sonrakini bul']
+  ], tip:'fn tuşuna iki kez basarak emoji panelini açabilirsin.'},
+  safari:{name:'Safari', items:[
+    ['⌘ L','Adres çubuğu'],['⌘ F','Sayfada ara'],['⌘ T','Yeni sekme'],['⌘ W','Sekmeyi kapat'],['⇧ ⌘ T','Kapatılanı aç'],
+    ['⌘ 1 – 9','Sekme seç'],['⌃ Tab','Sonraki sekme'],['⌘ [ ]','Geri / ileri'],['⌘ R','Yenile'],
+    ['⌘ D','Yer imi ekle'],['⌘ Y','Geçmiş'],['⌥ ⌘ L','İndirmeler'],['⌘ + -','Yakınlaştır / uzaklaştır']
+  ]},
+  bilgi:{name:'Biliyor muydun?', items:[
+    ['⌃ ⌘ Space','Emoji paneli hemen hemen her yazı alanında açılır'],
+    ['⌥ ⌘ Esc','Donan uygulamayı zorla kapatır'],
+    ['⌘','Simgenin kökeni tartışmalı; yaygın anlatıya göre ortak alan işareti'],
+    ['Ekran görüntüsü','Varsayılan olarak masaüstüne kaydedilir']
+  ]}
+};
+const ALIAS = {
+  kopyala:'⌘ C', yapıştır:'⌘ V', kes:'⌘ X', geri:'⌘ Z', yinele:'⇧ ⌘ Z', kapat:'⌘ W',
+  ekran:'⇧ ⌘ 3', görüntü:'⇧ ⌘ 4', kayıt:'⇧ ⌘ 5', kilit:'⌃ ⌘ Q', çık:'⌘ Q',
+  sekme:'⌘ T', yenile:'⌘ R', ara:'⌘ F', spotlight:'⌘ Space', emoji:'⌃ ⌘ Space',
+  klasör:'⇧ ⌘ G', sil:'⌘ Delete', kaydet:'⌘ S', yazdır:'⌘ P', zorla:'⌥ ⌘ Esc', pencere:'⌘ `'
+};
+
+/* Durum: tüm değişiklikler kaydedilir */
+function load(){
+  let s = {};
+  try { s = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){}
+  const st = Object.assign({name:'', avatar:'', wall:0, img:'', scale:'m', theme:'sys', icons:{}, order:DEFAULT_ORDER.slice(), extras:[], apps:[], glass:70, sglass:70}, s);
+  if(!Array.isArray(st.apps)) st.apps = [];
+  if(!Array.isArray(st.extras)) st.extras = [];
+  const all = [...DEFAULT_ORDER, ...st.apps.map(a => a.id)];
+  const order = st.order.filter(id => all.includes(id));
+  all.forEach(id => { if(!order.includes(id)) order.push(id); });
+  st.order = order;
+  return st;
+}
+let state = load();
+function save(){
+  try { localStorage.setItem(KEY, JSON.stringify(state)); }
+  catch(e){ alert('Kayıt alanı dolu. Daha küçük bir fotoğraf seçmeyi dene.'); }
+}
+function esc(t){ return String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function kbs(keys){
+  return '<span class="kbs">' + keys.split(' ').filter(Boolean).map(k => `<span class="kb">${esc(k)}</span>`).join('') + '</span>';
+}
+function rowsHTML(items){
+  return '<div class="group">' + items.map(([k,d]) => `<div class="row"><span class="d">${esc(d)}</span>${kbs(k)}</div>`).join('') + '</div>';
+}
+
+const grid = $('#grid'), wall = $('#wall'), home = $('#home'), res = $('#res'), q = $('#q'), av = $('#avatar');
+const stack = [];
+
+function curWalls(){ return document.documentElement.dataset.theme === 'light' ? WALLS_LIGHT : WALLS_DARK; }
+function applyVars(){
+  const r = document.documentElement.style;
+  r.setProperty('--scale', SCALES[state.scale] || 1);
+  r.setProperty('--gl', state.glass / 100);
+  r.setProperty('--sgl', state.sglass / 100);
+}
+function applySettings(){
+  const pref = state.theme || 'sys';
+  const dark = pref === 'sys' ? matchMedia('(prefers-color-scheme: dark)').matches : pref === 'dark';
+  document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  wall.style.background = state.img ? `url("${state.img}") center/cover no-repeat` : (curWalls()[state.wall] || curWalls()[0]);
+  av.innerHTML = state.avatar ? `<img src="${state.avatar}" alt="">` : `<span>${esc((state.name || 'K').trim().charAt(0).toUpperCase())}</span>`;
+  applyVars();
+}
+
+function metaOf(id){
+  if(META[id]) return META[id];
+  const a = state.apps.find(x => x.id === id);
+  if(!a) return null;
+  return {name:a.name, g:PALETTE[a.color % PALETTE.length], svg:STAR};
+}
+function iconHTML(id){
+  const m = metaOf(id);
+  const a = state.apps.find(x => x.id === id);
+  const pic = state.icons[id] || (a && a.icon);
+  if(pic) return `<div class="ic"><img src="${pic}" alt=""></div>`;
+  return `<div class="ic" style="--g1:${m.g[0]};--g2:${m.g[1]}"><svg viewBox="0 0 24 24" fill="none">${m.svg}</svg></div>`;
+}
+function renderHome(){
+  grid.innerHTML = '';
+  state.order.forEach(id => {
+    const m = metaOf(id); if(!m) return;
+    const t = document.createElement('div');
+    t.className = 'tile'; t.dataset.id = id;
+    t.innerHTML = iconHTML(id) + `<div class="lbl">${esc(m.name)}</div>`;
+    grid.appendChild(t);
+  });
+}
+
+/* Ekran yığını: itme geçişi, örtüşen katmanlar, kenardan geri kaydırma */
+function updateUnder(){
+  stack.forEach((s,i) => {
+    const top = i === stack.length - 1;
+    s.classList.toggle('in', top);
+    s.classList.toggle('under', !top);
+  });
+  home.classList.toggle('under', stack.length > 0);
+  document.querySelector('.sbar').style.display = stack.length ? 'none' : '';
+  if(stack.length) res.style.display = 'none';
+}
+function push(title, build){
+  const el = document.createElement('section');
+  el.className = 'screen';
+  el.innerHTML = `<div class="nav"><button class="back">‹ Geri</button><div class="ttl">${esc(title)}</div><span class="sp"></span></div><div class="body"></div>`;
+  el.querySelector('.back').onclick = pop;
+  $('#app').appendChild(el);
+  stack.push(el);
+  build(el.querySelector('.body'));
+  attachSwipe(el);
+  requestAnimationFrame(() => requestAnimationFrame(updateUnder));
+}
+function pop(){
+  const el = stack.pop(); if(!el) return;
+  el.classList.remove('in','under');
+  setTimeout(() => el.remove(), 480);
+  updateUnder();
+}
+function attachSwipe(el){
+  let sx = null, dx = 0;
+  el.addEventListener('pointerdown', e => {
+    if(e.clientX > 28 || stack[stack.length-1] !== el) return;
+    sx = e.clientX; el.setPointerCapture(e.pointerId); el.style.transition = 'none';
+  });
+  el.addEventListener('pointermove', e => {
+    if(sx === null) return;
+    dx = Math.max(0, e.clientX - sx);
+    el.style.transform = `translateX(${dx}px)`;
+  });
+  const end = () => {
+    if(sx === null) return;
+    sx = null; el.style.transition = ''; el.style.transform = '';
+    if(dx > 90) pop();
+    dx = 0;
+  };
+  el.addEventListener('pointerup', end);
+  el.addEventListener('pointercancel', end);
+}
+
+/* Ekranlar */
+function openSection(id){
+  if(id === 'ekstra') return push('Ekstra Kısayollar', renderExtras);
+  if(id === 'ayarlar') return push('Ayarlar', renderSettings);
+  if(SECTIONS[id]){
+    const s = SECTIONS[id];
+    return push(s.name, b => { b.innerHTML = rowsHTML(s.items) + (s.tip ? `<div class="tip"><b>İpucu:</b> ${esc(s.tip)}</div>` : ''); });
+  }
+  const a = state.apps.find(x => x.id === id);
+  if(a) push(a.name, b => renderApp(b, a));
+}
+function renderExtras(body){
+  const list = state.extras.length
+    ? '<div class="group">' + state.extras.map((x,i) =>
+        `<div class="row"><span class="d">${esc(x.name)}${x.desc ? `<small>${esc(x.desc)}</small>` : ''}</span>${kbs(x.keys)}<button class="small-del" data-del="${i}">Sil</button></div>`).join('') + '</div>'
+    : '<div class="group"><div class="row"><span class="d" style="color:var(--sub)">Henüz ekstra kısayol yok</span></div></div>';
+  body.innerHTML = `
+    <div class="sec">Yeni kısayol</div>
+    <div class="group pad">
+      <input id="xn" placeholder="Ne yapar? (örn. Ekran kilidi)" maxlength="40">
+      <input id="xk" placeholder="Tuşlar (örn. ⌘ ⇧ K)" maxlength="30">
+      <input id="xd" placeholder="Açıklama (isteğe bağlı)" maxlength="60">
+      <button class="btn" id="xadd">Ekle</button>
+    </div>
+    <div class="sec">Eklediklerin</div>${list}`;
+  body.querySelector('#xadd').onclick = () => {
+    const name = body.querySelector('#xn').value.trim();
+    const keys = body.querySelector('#xk').value.trim();
+    const desc = body.querySelector('#xd').value.trim();
+    if(!name || !keys) return alert('Ad ve tuş alanları zorunlu.');
+    state.extras.push({name, keys, desc}); save(); renderExtras(body);
+  };
+  body.querySelectorAll('[data-del]').forEach(b => b.onclick = () => {
+    state.extras.splice(+b.dataset.del, 1); save(); renderExtras(body);
+  });
+}
+function renderApp(body, a){
+  const rows = a.items.length
+    ? '<div class="group">' + a.items.map((x,i) => `<div class="row"><span class="d">${esc(x.desc || '—')}</span>${kbs(x.keys)}<button class="small-del" data-d="${i}">Sil</button></div>`).join('') + '</div>'
+    : '<div class="group"><div class="row"><span class="d" style="color:var(--sub)">Henüz kısayol yok</span></div></div>';
+  body.innerHTML = `
+    <div class="sec">Yeni kısayol</div>
+    <div class="group pad">
+      <input id="ak" placeholder="Tuşlar (örn. ⌘ ⇧ K)" maxlength="30">
+      <input id="ad" placeholder="Ne yapar?" maxlength="60">
+      <button class="btn" id="aadd">Ekle</button>
+    </div>
+    <div class="sec">Kısayollar</div>${rows}
+    <div class="sec">Kutucuk</div>
+    <div class="group pad"><button class="btn danger" id="adel">Bu kutucuğu sil</button></div>`;
+  body.querySelector('#aadd').onclick = () => {
+    const k = body.querySelector('#ak').value.trim(), d = body.querySelector('#ad').value.trim();
+    if(!k) return alert('Tuş alanı zorunlu.');
+    a.items.push({keys:k, desc:d}); save(); renderApp(body, a);
+  };
+  body.querySelectorAll('[data-d]').forEach(b => b.onclick = () => {
+    a.items.splice(+b.dataset.d, 1); save(); renderApp(body, a);
+  });
+  body.querySelector('#adel').onclick = () => {
+    if(!confirm('Kutucuk silinsin mi?')) return;
+    deleteApp(a.id); pop();
+  };
+}
+function deleteApp(id){
+  state.apps = state.apps.filter(x => x.id !== id);
+  state.order = state.order.filter(x => x !== id);
+  save(); renderHome();
+}
+
+/* Fotoğraf yardımcıları */
+function readImage(file, cb){
+  const r = new FileReader();
+  r.onload = () => { const img = new Image(); img.onload = () => cb(img); img.src = r.result; };
+  r.readAsDataURL(file);
+}
+function compressWall(file, cb){
+  readImage(file, img => {
+    const k = Math.min(1, 1080 / Math.max(img.width, img.height));
+    const c = document.createElement('canvas');
+    c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+    c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+    cb(c.toDataURL('image/jpeg', .8));
+  });
+}
+function compressSquare(file, cb){
+  readImage(file, img => {
+    const c = document.createElement('canvas'); c.width = 256; c.height = 256;
+    const s = Math.min(img.width, img.height);
+    c.getContext('2d').drawImage(img, (img.width-s)/2, (img.height-s)/2, s, s, 0, 0, 256, 256);
+    cb(c.toDataURL('image/png'));
+  });
+}
+function setIcon(id, data){
+  const a = state.apps.find(x => x.id === id);
+  if(a) a.icon = data; else state.icons[id] = data;
+}
+function resetIcon(id){
+  const a = state.apps.find(x => x.id === id);
+  if(a) delete a.icon; else delete state.icons[id];
+}
+function hasIcon(id){
+  const a = state.apps.find(x => x.id === id);
+  return !!(a ? a.icon : state.icons[id]);
+}
+
+/* Ayarlar */
+let draft = {name:'', color:0, icon:''};
+function themeHTML(){
+  const cur = state.theme || 'sys';
+  return `<div class="sec">Tema</div><div class="group pad"><div class="seg">${[['sys','Sistem'],['light','Açık'],['dark','Koyu']].map(([k,l]) =>
+    `<button data-th="${k}" class="${cur===k ? 'on' : ''}">${l}</button>`).join('')}</div></div>`;
+}
+function iconRowsHTML(){
+  return '<div class="group">' + state.order.map(id => {
+    const m = metaOf(id);
+    return `<div class="row"><span class="d">${esc(m.name)}</span>${hasIcon(id) ? `<button class="small-del" data-iconreset="${id}">Sıfırla</button>` : ''}<label class="small-del" style="color:var(--accent);cursor:pointer">Değiştir<input type="file" accept="image/*" data-icon="${id}" hidden></label></div>`;
+  }).join('') + '</div>';
+}
+function appListHTML(){
+  if(!state.apps.length) return '<div class="group"><div class="row"><span class="d" style="color:var(--sub)">Henüz kendi kutucuğun yok</span></div></div>';
+  return '<div class="group">' + state.apps.map(a =>
+    `<div class="row"><span class="d">${esc(a.name)}</span><button class="small-del" data-delapp="${a.id}">Sil</button></div>`).join('') + '</div>';
+}
+function renderSettings(body){
+  body.innerHTML = `
+    <div class="sec">Profil</div>
+    <div class="group pad">
+      <input id="nm" placeholder="Kullanıcı adın" value="${esc(state.name)}" maxlength="24">
+      <label class="btn ghost">Profil fotoğrafı seç<input type="file" id="avf" accept="image/*" hidden></label>
+      ${state.avatar ? '<button class="btn ghost" id="avr">Profil fotoğrafını kaldır</button>' : ''}
+    </div>
+    ${themeHTML()}
+    <div class="sec">Arka plan</div>
+    <div class="group pad">
+      <div class="swatches">${curWalls().map((w,i) => `<div class="sw ${!state.img && state.wall===i ? 'on' : ''}" data-w="${i}" style="background:${w}"></div>`).join('')}</div>
+      <label class="btn ghost">Kendi fotoğrafını seç<input type="file" id="pic" accept="image/*" hidden></label>
+    </div>
+    <div class="sec">Şeffaflık</div>
+    <div class="group pad">
+      <div class="lab"><span>Ana kutu opaklığı</span><b id="gv">${state.glass}%</b></div>
+      <input type="range" id="gl" min="0" max="100" value="${state.glass}">
+      <div class="lab"><span>Arama kutusu opaklığı</span><b id="sv">${state.sglass}%</b></div>
+      <input type="range" id="sgl" min="0" max="100" value="${state.sglass}">
+      <p class="note" style="margin:0">0 yaparsan kutu tamamen kalkar.</p>
+    </div>
+    <div class="sec">Yazı boyutu</div>
+    <div class="group pad"><div class="seg">${Object.keys(SCALES).map(k =>
+      `<button data-sc="${k}" class="${state.scale===k ? 'on' : ''}">${k.toUpperCase()}</button>`).join('')}</div></div>
+    <div class="sec">Yeni kutucuk ekle</div>
+    <div class="group pad">
+      <input id="cn" placeholder="Kutucuk adı" maxlength="18" value="${esc(draft.name)}">
+      <div class="pal">${PALETTE.map((p,i) => `<div data-pal="${i}" class="${draft.color===i ? 'on' : ''}" style="background:linear-gradient(160deg,${p[0]},${p[1]})"></div>`).join('')}</div>
+      <label class="btn ghost">${draft.icon ? 'Fotoğraf seçildi ✓' : 'Fotoğraf ekle (isteğe bağlı)'}<input type="file" id="cpic" accept="image/*" hidden></label>
+      <button class="btn" id="cadd">Ana ekrana ekle</button>
+    </div>
+    ${appListHTML()}
+    <div class="sec">Simgeler</div>${iconRowsHTML()}
+    <div class="sec">Sıfırla</div>
+    <div class="group pad"><button class="btn danger" id="rst">Tüm ayarları ve kısayolları sıfırla</button></div>
+    <div class="sec">Geliştirici</div>
+    <div class="group dev pad"><b>Onur Bekir Çalgın</b><span>Claude ile geliştirilmiştir</span></div>`;
+
+  body.querySelector('#nm').oninput = e => { state.name = e.target.value.trim(); save(); applySettings(); };
+  const avf = body.querySelector('#avf');
+  avf.onchange = e => { const f = e.target.files[0]; if(!f) return;
+    compressSquare(f, data => { state.avatar = data; save(); applySettings(); renderSettings(body); }); };
+  const avr = body.querySelector('#avr');
+  if(avr) avr.onclick = () => { state.avatar = ''; save(); applySettings(); renderSettings(body); };
+
+  body.querySelectorAll('[data-th]').forEach(b => b.onclick = () => { state.theme = b.dataset.th; save(); applySettings(); renderSettings(body); });
+  body.querySelectorAll('[data-w]').forEach(s => s.onclick = () => { state.wall = +s.dataset.w; state.img = ''; save(); applySettings(); renderSettings(body); });
+  body.querySelector('#pic').onchange = e => { const f = e.target.files[0]; if(!f) return;
+    compressWall(f, data => { state.img = data; save(); applySettings(); renderSettings(body); }); };
+
+  body.querySelector('#gl').oninput = e => { state.glass = +e.target.value; body.querySelector('#gv').textContent = state.glass + '%'; save(); applyVars(); };
+  body.querySelector('#sgl').oninput = e => { state.sglass = +e.target.value; body.querySelector('#sv').textContent = state.sglass + '%'; save(); applyVars(); };
+  body.querySelectorAll('[data-sc]').forEach(b => b.onclick = () => { state.scale = b.dataset.sc; save(); applyVars(); renderSettings(body); });
+
+  body.querySelector('#cn').oninput = e => { draft.name = e.target.value; };
+  body.querySelectorAll('[data-pal]').forEach(p => p.onclick = () => { draft.color = +p.dataset.pal; renderSettings(body); });
+  body.querySelector('#cpic').onchange = e => { const f = e.target.files[0]; if(!f) return;
+    compressSquare(f, data => { draft.icon = data; renderSettings(body); }); };
+  body.querySelector('#cadd').onclick = () => {
+    const name = draft.name.trim();
+    if(!name) return alert('Bir kutucuk adı yaz.');
+    const id = 'c_' + Date.now().toString(36);
+    state.apps.push({id, name, color: draft.color, icon: draft.icon || '', items: []});
+    state.order.push(id);
+    draft = {name:'', color:0, icon:''};
+    save(); renderHome(); renderSettings(body);
+  };
+  body.querySelectorAll('[data-delapp]').forEach(b => b.onclick = () => {
+    if(!confirm('Bu kutucuk silinsin mi?')) return;
+    deleteApp(b.dataset.delapp); renderSettings(body);
+  });
+
+  body.querySelectorAll('[data-icon]').forEach(inp => inp.onchange = e => {
+    const f = e.target.files[0]; if(!f) return;
+    compressSquare(f, data => { setIcon(inp.dataset.icon, data); save(); renderHome(); renderSettings(body); });
+  });
+  body.querySelectorAll('[data-iconreset]').forEach(b => b.onclick = () => {
+    resetIcon(b.dataset.iconreset); save(); renderHome(); renderSettings(body);
+  });
+  body.querySelector('#rst').onclick = () => {
+    if(!confirm('Tüm kayıtlar silinsin mi?')) return;
+    localStorage.removeItem(KEY); location.reload();
+  };
+}
+av.onclick = () => push('Ayarlar', renderSettings);
+
+/* Ana ekran: dokunma ve sürükle-bırak */
+let pressT = null, dragEl = null, target = null, sx0 = 0, sy0 = 0, suppress = false;
+function nearest(x, y){
+  let best = null, bd = 1e9;
+  grid.querySelectorAll('.tile').forEach(t => {
+    if(t === dragEl) return;
+    const r = t.getBoundingClientRect();
+    const d = Math.hypot(x - (r.left + r.width/2), y - (r.top + r.height/2));
+    if(d < bd){ bd = d; best = t; }
+  });
+  return bd < 52 ? best : null;
+}
+grid.addEventListener('pointerdown', e => {
+  const t = e.target.closest('.tile'); if(!t) return;
+  suppress = false; sx0 = e.clientX; sy0 = e.clientY;
+  clearTimeout(pressT);
+  pressT = setTimeout(() => {
+    dragEl = t; t.classList.add('drag');
+    grid.querySelectorAll('.tile').forEach(x => x.classList.add('wig'));
+    try { grid.setPointerCapture(e.pointerId); } catch(_){}
+  }, 350);
+});
+grid.addEventListener('pointermove', e => {
+  if(!dragEl){
+    if(Math.hypot(e.clientX - sx0, e.clientY - sy0) > 10){ clearTimeout(pressT); pressT = null; }
+    return;
+  }
+  dragEl.style.transform = `translate(${e.clientX - sx0}px, ${e.clientY - sy0}px) scale(1.08)`;
+  const nt = nearest(e.clientX, e.clientY);
+  if(target && target !== nt) target.classList.remove('target');
+  target = nt;
+  if(nt) nt.classList.add('target');
+});
+const endDrag = () => {
+  clearTimeout(pressT); pressT = null;
+  if(!dragEl) return;
+  if(target){
+    const id = dragEl.dataset.id, tid = target.dataset.id;
+    state.order.splice(state.order.indexOf(id), 1);
+    state.order.splice(state.order.indexOf(tid), 0, id);
+    save();
+  }
+  dragEl = null; target = null; suppress = true;
+  renderHome();
+};
+grid.addEventListener('pointerup', endDrag);
+grid.addEventListener('pointercancel', endDrag);
+grid.addEventListener('click', e => {
+  if(suppress){ suppress = false; return; }
+  const t = e.target.closest('.tile');
+  if(t) openSection(t.dataset.id);
+});
+
+/* Arama ve yerel asistan (dış servis kullanmaz) */
+function allItems(){
+  const list = [];
+  Object.values(SECTIONS).forEach(s => s.items.forEach(([k,d]) => list.push({k, d, src: s.name})));
+  state.extras.forEach(x => list.push({k: x.keys, d: x.name + (x.desc ? ' ' + x.desc : ''), src: 'Ekstra'}));
+  state.apps.forEach(a => a.items.forEach(x => list.push({k: x.keys, d: x.desc || a.name, src: a.name})));
+  return list;
+}
+function answer(text){
+  const words = text.toLowerCase().split(/\s+/).filter(Boolean);
+  const aliasKeys = Object.keys(ALIAS).filter(a => words.some(w => w.startsWith(a)));
+  const hits = [];
+  allItems().forEach(it => {
+    const hay = (it.d + ' ' + it.k + ' ' + it.src).toLowerCase();
+    let score = 0;
+    words.forEach(w => { if(hay.includes(w)) score += 2; });
+    aliasKeys.forEach(a => { if(it.k.includes(ALIAS[a])) score += 3; });
+    if(score > 0) hits.push({...it, score});
+  });
+  return hits.sort((a,b) => b.score - a.score).slice(0, 12);
+}
+q.addEventListener('input', () => {
+  const v = q.value.trim();
+  if(!v){ res.style.display = 'none'; return; }
+  const hits = answer(v);
+  res.style.display = 'block';
+  res.innerHTML = hits.length
+    ? '<div class="group" style="margin:0;border-radius:1rem">' + hits.map(h =>
+        `<div class="row"><span class="d">${esc(h.d)}<small>${esc(h.src)}</small></span>${kbs(h.k)}</div>`).join('') + '</div>'
+    : '<div class="empty">Eşleşme yok. "kopyala", "ekran", "sekme" gibi kısa kelimeler dene.</div>';
+});
+q.addEventListener('keydown', e => { if(e.key === 'Enter') q.blur(); });
+
+/* Başlangıç */
+applySettings();
+renderHome();
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { if((state.theme || 'sys') === 'sys') applySettings(); });
+</script>
+</body>
+</html>
